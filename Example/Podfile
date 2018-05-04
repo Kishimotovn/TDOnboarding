@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TDOnboarding_Example' do
+  pod 'TDOnboarding', :path => '../'
+
+  target 'TDOnboarding_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
