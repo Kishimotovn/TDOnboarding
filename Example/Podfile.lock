@@ -1,0 +1,16 @@
+PODS:
+  - TDOnboarding (0.1.0)
+
+DEPENDENCIES:
+  - TDOnboarding (from `../`)
+
+EXTERNAL SOURCES:
+  TDOnboarding:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TDOnboarding: d69aa4d2b94fbf14a1ac258ae3dc3cb31aaf46e6
+
+PODFILE CHECKSUM: 6eb74ce9a387e4921636c0c0ca1ec4426224b16b
+
+COCOAPODS: 1.5.0

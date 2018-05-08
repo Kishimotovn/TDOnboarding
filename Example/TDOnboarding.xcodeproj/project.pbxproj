@@ -15,6 +15,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9B6CD0418DA21F44CC5AB807 /* Pods_TDOnboarding_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB6F35A792644BA34903A42 /* Pods_TDOnboarding_Tests.framework */; };
+		B4B415AC209CC2FC0087DF0E /* CustomPaginationItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B415AA209CC2FC0087DF0E /* CustomPaginationItemCell.swift */; };
+		B4B415AD209CC2FC0087DF0E /* CustomPaginationItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B415AB209CC2FC0087DF0E /* CustomPaginationItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +43,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		AFB13D4C45E6D873ABB8550C /* Pods-TDOnboarding_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDOnboarding_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TDOnboarding_Example/Pods-TDOnboarding_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B66F34F62F936DBF10318E02 /* TDOnboarding.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TDOnboarding.podspec; path = ../TDOnboarding.podspec; sourceTree = "<group>"; };
-		C7DE85FDEA3902B58024B1D2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B4B415AA209CC2FC0087DF0E /* CustomPaginationItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaginationItemCell.swift; sourceTree = "<group>"; };
+		B4B415AB209CC2FC0087DF0E /* CustomPaginationItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPaginationItemCell.xib; sourceTree = "<group>"; };
+		B66F34F62F936DBF10318E02 /* TDOnboarding.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TDOnboarding.podspec; path = ../TDOnboarding.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C7DE85FDEA3902B58024B1D2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D245339CC5E6A0969446A019 /* Pods-TDOnboarding_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDOnboarding_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TDOnboarding_Tests/Pods-TDOnboarding_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D2B48FBAFB8C2CB0B74D0F90 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D2B48FBAFB8C2CB0B74D0F90 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D36415614B4B064117D661CC /* Pods-TDOnboarding_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDOnboarding_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TDOnboarding_Tests/Pods-TDOnboarding_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F25605EEC5A75A52C39127A2 /* Pods_TDOnboarding_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDOnboarding_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +103,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				B4B415AE209CC3000087DF0E /* CustomPaginationItemCell */,
 			);
 			name = "Example for TDOnboarding";
 			path = TDOnboarding;
@@ -146,6 +151,15 @@
 				3AB6F35A792644BA34903A42 /* Pods_TDOnboarding_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4B415AE209CC3000087DF0E /* CustomPaginationItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				B4B415AA209CC2FC0087DF0E /* CustomPaginationItemCell.swift */,
+				B4B415AB209CC2FC0087DF0E /* CustomPaginationItemCell.xib */,
+			);
+			name = CustomPaginationItemCell;
 			sourceTree = "<group>";
 		};
 		FF5462436ECCA7973DF8F07C /* Pods */ = {
@@ -207,15 +221,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = RA4PB2C3M4;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = RA4PB2C3M4;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -246,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				B4B415AD209CC2FC0087DF0E /* CustomPaginationItemCell.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -323,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				B4B415AC209CC2FC0087DF0E /* CustomPaginationItemCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,12 +395,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -430,12 +450,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -469,6 +491,7 @@
 			baseConfigurationReference = AFB13D4C45E6D873ABB8550C /* Pods-TDOnboarding_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RA4PB2C3M4;
 				INFOPLIST_FILE = TDOnboarding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -484,6 +507,7 @@
 			baseConfigurationReference = 0D538D7A87976774E4A5D943 /* Pods-TDOnboarding_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RA4PB2C3M4;
 				INFOPLIST_FILE = TDOnboarding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -498,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D245339CC5E6A0969446A019 /* Pods-TDOnboarding_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = RA4PB2C3M4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -519,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D36415614B4B064117D661CC /* Pods-TDOnboarding_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = RA4PB2C3M4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
