@@ -25,7 +25,18 @@ class ViewController: UIViewController {
         items.append(ExampleOnboardingItem(image: #imageLiteral(resourceName: "iphoneplaceholder"), title: "Item 3", subtitle: "when an unknown printer took a galley of type and scrambled it to make a type specimen book", isLast: false))
         items.append(ExampleOnboardingItem(image: #imageLiteral(resourceName: "iphoneplaceholder"), title: "Item 4", subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,", isLast: true))
         let onboarding = TDOnboarding(items: items, options: ExampleOnboardingOptions())
+        onboarding.delegate = self
         onboarding.present(from: self, completion: nil)
+    }
+}
+
+extension ViewController: TDOnboardingDelegate {
+    func topActionButtonTapped(on onboarding: TDOnboarding, itemIndex: Int) {
+        print("did tap top in \(itemIndex)")
+    }
+    
+    func bottomActionButtonTapped(on onboarding: TDOnboarding, itemIndex: Int) {
+        print("did tap bottom in \(itemIndex)")
     }
 }
 
@@ -53,17 +64,13 @@ struct ExampleOnboardingItem: TDOnboardingItem {
         self.topTitle = NSAttributedString(string: title, attributes: titleAttributes)
         self.bottomTitle = NSAttributedString(string: title, attributes: titleAttributes)
         self.topActionButtonTitle = NSAttributedString(string: "Skip", attributes: subtitleAttributes)
-//        self.bottomActionButtonTitle = isLast ? NSAttributedString(string: "Complete", attributes: titleAttributes) : nil
+        self.bottomActionButtonTitle = NSAttributedString(string: "Close", attributes: subtitleAttributes)
     }
 }
 
 struct ExampleOnboardingOptions: TDOnboardingOptions {
     var statusBarStyle: UIStatusBarStyle {
         return .lightContent
-    }
-
-    var tintColor: UIColor {
-        return UIColor.white
     }
     
     var defaultBackgroundImage: UIImage {
@@ -92,8 +99,8 @@ struct ExampleOnboardingOptions: TDOnboardingOptions {
         }
     }
 
-    var paginationCell: TDOnboardingPaginationCell.Type {
-        return CustomPaginationItemCell.self
-    }
+//    var paginationCell: TDOnboardingPaginationCell.Type {
+//        return CustomPaginationItemCell.self
+//    }
 }
 

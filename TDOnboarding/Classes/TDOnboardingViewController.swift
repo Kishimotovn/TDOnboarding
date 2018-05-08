@@ -8,11 +8,10 @@
 import UIKit
 
 class TDOnboardingViewController: UIViewController {
-    class public func initiateFromStoryboard(with items: [TDOnboardingItem], options: TDOnboardingOptions) -> TDOnboardingViewController? {
+    class public func initiateFromStoryboard(with onboarding: TDOnboarding) -> TDOnboardingViewController? {
         let storyboard = UIStoryboard(name: "TDOnboarding", bundle: Bundle(for: TDOnboardingViewController.classForCoder()))
         if let vc = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as? TDOnboardingViewController {
-            vc.items = items
-            vc.options = options
+            vc.onboarding = onboarding
             return vc
         }
 
@@ -32,9 +31,22 @@ class TDOnboardingViewController: UIViewController {
     @IBOutlet weak var paginationView: TDOnboardingPaginationView!
     @IBOutlet weak var backgroundImageOverlayView: UIView!
 
+    // MARK: - IBActions:
+    @IBAction func topActionButtonTapped() {
+        self.delegate?.topActionButtonTapped(on: self.onboarding, itemIndex: self.currentPage)
+    }
+
     // MARK: - Model:
-    var items: [TDOnboardingItem] = []
-    var options: TDOnboardingOptions!
+    var onboarding: TDOnboarding!
+    var items: [TDOnboardingItem] {
+        return self.onboarding.items
+    }
+    var options: TDOnboardingOptions {
+        return self.onboarding.options
+    }
+    var delegate: TDOnboardingDelegate? {
+        return self.onboarding.delegate
+    }
 
     var currentPage: Int = 0 {
         didSet {
@@ -88,8 +100,15 @@ extension TDOnboardingViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "onboardingItemCell", for: indexPath) as! TDOnboardingItemCell
         cell.item = self.items[indexPath.row]
         cell.options = self.options
+        cell.delegate = self
         cell.configure()
         return cell
+    }
+}
+
+extension TDOnboardingViewController: TDOnboardingItemCellDelegate {
+    func bottomActionTapped(on cell: TDOnboardingItemCell) {
+        self.delegate?.bottomActionButtonTapped(on: self.onboarding, itemIndex: self.currentPage)
     }
 }
 

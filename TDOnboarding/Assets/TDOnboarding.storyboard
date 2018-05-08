@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Afl-Cg-M5R">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="533.33333333333337"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="533.66666666666663"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQJ-bt-TlK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="533.33333333333337"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="533.66666666666663"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CA9-fY-mNd">
-                                <rect key="frame" x="0.0" y="533.33333333333337" width="375" height="244.66666666666663"/>
+                                <rect key="frame" x="0.0" y="533.66666666666663" width="375" height="244.33333333333337"/>
                                 <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="244.66666666666663" id="DSN-5F-Hae"/>
@@ -83,17 +83,17 @@
                                                             </constraints>
                                                         </view>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1LQ-f6-UcO">
-                                                            <rect key="frame" x="0.0" y="73.999999999999972" width="375" height="385.33333333333326"/>
+                                                            <rect key="frame" x="0.0" y="74.000000000000028" width="375" height="385.66666666666674"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JK4-SZ-wL8">
-                                                            <rect key="frame" x="0.0" y="459.33333333333331" width="375" height="30"/>
+                                                            <rect key="frame" x="0.0" y="459.66666666666669" width="375" height="30"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="d91-Uw-cSI"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAt-Db-vV8">
-                                                            <rect key="frame" x="0.0" y="489.33333333333331" width="375" height="244.66666666666669"/>
+                                                            <rect key="frame" x="0.0" y="489.66666666666669" width="375" height="244.33333333333331"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JPB-Om-wXz">
                                                                     <rect key="frame" x="16" y="16" width="343" height="187.33333333333334"/>
@@ -105,7 +105,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leN-jK-CfX">
-                                                                            <rect key="frame" x="12.666666666666657" y="40.00000000000005" width="318" height="81.333333333333314"/>
+                                                                            <rect key="frame" x="12.666666666666657" y="39.999999999999936" width="318" height="81.333333333333314"/>
                                                                             <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</string>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
@@ -118,6 +118,9 @@
                                                                                 <constraint firstAttribute="width" constant="315" id="sP1-x7-S0B"/>
                                                                             </constraints>
                                                                             <state key="normal" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="bottomButtonTapped" destination="kNd-03-krz" eventType="touchUpInside" id="A1G-vS-hdA"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -142,8 +145,8 @@
                                             <constraint firstItem="lwt-Mh-6aO" firstAttribute="leading" secondItem="kNd-03-krz" secondAttribute="leading" id="OeM-SM-xoc"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="bottomActionButton" destination="ceL-A5-pbm" id="STo-Hp-hse"/>
                                             <outlet property="bottomPanelHeightConstraint" destination="ICo-AV-uYL" id="IsG-zQ-vXT"/>
-                                            <outlet property="bottomSkipButton" destination="ceL-A5-pbm" id="STo-Hp-hse"/>
                                             <outlet property="bottomTitleLabel" destination="PVq-gW-Pkc" id="gNW-ED-Vfh"/>
                                             <outlet property="imageBottomDistanceConstraint" destination="d91-Uw-cSI" id="jhY-tj-eOa"/>
                                             <outlet property="imageTopDistanceConstraint" destination="9XZ-jO-Q7O" id="AEc-nf-WU2"/>
@@ -168,6 +171,9 @@
                                             <constraint firstAttribute="height" constant="44" id="gW7-7U-Fdk"/>
                                         </constraints>
                                         <state key="normal" title="Skip"/>
+                                        <connections>
+                                            <action selector="topActionButtonTapped" destination="zvW-uc-zSb" eventType="touchUpInside" id="JmA-rH-1sO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

@@ -27,7 +27,6 @@ public enum TDOnboardingConfigurableComponent {
 
 public protocol TDOnboardingOptions {
     var defaultBackgroundImage: UIImage { get }
-    var tintColor: UIColor { get }
     var statusBarStyle: UIStatusBarStyle { get }
     var paginationCell: TDOnboardingPaginationCell.Type { get }
     func measure(for component: TDOnboardingMeasurableComponent) -> CGFloat?
