@@ -17,10 +17,6 @@ TDOnboarding is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following lines to your Podfile:
 
 ```ruby
-source 'https://bitbucket.org/thedistance/thedistancekit-cocoapods.git'
-```
-
-```ruby
 pod 'TDOnboarding'
 ```
 

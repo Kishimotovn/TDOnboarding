@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TDOnboarding'
-  s.version          = '2.0.1'
+  s.version          = '2.0.2'
   s.summary          = 'A shortcut to create TD styled onboarding with easy customization'
 
 # This description is used to generate tags and improve search results.
@@ -21,15 +21,15 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://bitbucket.org/thedistance/tdonboarding-v2'
+  s.homepage         = 'https://github.com/Kishimotovn/TDOnboarding'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Anh Phan Tran' => 'anh@thedistance.co.uk' }
-  s.source           = { :git => 'git@bitbucket.org:thedistance/tdonboarding-v2.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Kishimotovn/TDOnboarding.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-  
+
   s.source_files = 'TDOnboarding/**/*.swift'
   s.resources = 'TDOnboarding/**/*.{xib,storyboard,xcassets}'
 
