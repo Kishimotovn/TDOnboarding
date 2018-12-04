@@ -23,6 +23,7 @@ public enum TDOnboardingColorizableComponent {
 public enum TDOnboardingConfigurableComponent {
     case topActionButton(UIButton)
     case bottomActionButton(UIButton)
+    case backgroundImageView(UIImageView)
 }
 
 public protocol TDOnboardingOptions {

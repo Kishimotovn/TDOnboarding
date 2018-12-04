@@ -11,6 +11,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Swift 4
+iOS 9.0
+
 ## Installation
 
 TDOnboarding is available through [CocoaPods](http://cocoapods.org). To install
@@ -77,6 +80,7 @@ public enum TDOnboardingColorizableComponent {
 public enum TDOnboardingConfigurableComponent {
     case topActionButton(UIButton)
     case bottomActionButton(UIButton)
+    case backgroundImageView(UIImageView)
 }
 ```
 

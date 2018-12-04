@@ -87,6 +87,7 @@ class TDOnboardingViewController: UIViewController {
     self.bottomPanelView.backgroundColor = self.options.color(for: .bottomPanel) ?? UIColor(red: 80/255, green: 227/255, blue: 194/255, alpha: 1.0)
     self.bottomPanelTail.backgroundColor = self.options.color(for: .bottomPanel) ?? UIColor(red: 80/255, green: 227/255, blue: 194/255, alpha: 1.0)
     self.backgroundImageOverlayView.backgroundColor = self.options.color(for: .backgroundImageOverlay) ?? UIColor.black.withAlphaComponent(0.3)
+    self.options.configure(for: .backgroundImageView(self.defaultBackgroundImageView))
   }
 }
 
