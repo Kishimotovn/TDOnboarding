@@ -49,12 +49,12 @@ struct ExampleOnboardingItem: TDOnboardingItem {
     var bottomActionButtonTitle: NSAttributedString?
 
     init(image: UIImage, title: String, subtitle: String, isLast: Bool) {
-        let titleAttributes: [NSAttributedStringKey: Any] = [
+        let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 17, weight: .semibold),
             .foregroundColor: UIColor.white
         ]
 
-        let subtitleAttributes: [NSAttributedStringKey: Any] = [
+        let subtitleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 14, weight: .light),
             .foregroundColor: UIColor.white
         ]

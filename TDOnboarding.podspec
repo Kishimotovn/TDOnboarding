@@ -8,8 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TDOnboarding'
-  s.version          = '2.0.3'
+  s.version          = '2.1'
   s.summary          = 'A shortcut to create TD styled onboarding with easy customization'
+  s.swift_version    = '5.0'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
